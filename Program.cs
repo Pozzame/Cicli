@@ -1,23 +1,32 @@
-﻿Console.WriteLine("Quante iterazioni?");
+﻿using System.Net;
+
+Console.WriteLine("Quante iterazioni?");
 int iterazioni = Convert.ToInt32(Console.ReadLine());
 
 Random rng = new Random();
-int prove = 0;
-
+int media=0;
+int ite = iterazioni;
 while (Convert.ToBoolean(iterazioni))
 {
-    int num = rng.Next(1000);
-
-    while(Trovatore(num) == num);
-    
+    media += TrovatoreRand(rng.Next(1000));
+    //Console.WriteLine($"Ci ha messo {volte} volte");
     iterazioni--;
 }
+Console.WriteLine($"Ci ha messo mediamente {media/ite} volte.");
 
-int Trovatore(int num)
+int TrovatoreRand(int num)
 {
-    while (num == rng.Next(1000))
-        {
-            return prova;
-            prove++;
-        }
+    int prove = 1;
+    
+    while(num != rng.Next(1000))
+    {
+        prove++;            
+    }
+    return prove;
+}
+
+int TrovatoreAureo(int num)
+{
+    int prove = 1;
+    
 }
