@@ -2,7 +2,7 @@
 int segreto = rng.Next(100);
 Console.WriteLine("Quanti tentativi vuoi?");
 int prove = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Prova un numero.");
+Console.WriteLine("Prova un numero. (1-100)");
 
 while (prove > 0)
 {
