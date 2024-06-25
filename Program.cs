@@ -1,32 +1,21 @@
-﻿using System.Net;
+﻿Random rng = new Random();
+int segreto = rng.Next(100);
+Console.WriteLine("Quanti tentativi vuoi?");
+int prove = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Prova un numero.");
 
-Console.WriteLine("Quante iterazioni?");
-int iterazioni = Convert.ToInt32(Console.ReadLine());
-
-Random rng = new Random();
-int media=0;
-int ite = iterazioni;
-while (Convert.ToBoolean(iterazioni))
+while (prove > 0)
 {
-    media += TrovatoreRand(rng.Next(1000));
-    //Console.WriteLine($"Ci ha messo {volte} volte");
-    iterazioni--;
-}
-Console.WriteLine($"Ci ha messo mediamente {media/ite} volte.");
-
-int TrovatoreRand(int num)
-{
-    int prove = 1;
-    
-    while(num != rng.Next(1000))
+    int num = Convert.ToInt32(Console.ReadLine());
+    if (num == segreto)
     {
-        prove++;            
+        Console.WriteLine("Bravo! :-D");
+        prove = -1;
     }
-    return prove;
+    else if (num < segreto)
+        Console.WriteLine("Prova più alto.");
+    else if (num > segreto)
+        Console.WriteLine("Prova più basso.");
+    prove--;
 }
-
-int TrovatoreAureo(int num)
-{
-    int prove = 1;
-    
-}
+if (prove >= 0 ) Console.WriteLine("Spiacente, hai perso. :-(");
