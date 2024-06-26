@@ -1,4 +1,5 @@
-﻿Random rng = new Random();
+﻿Console.Clear();
+Random rng = new Random();
 int segreto = rng.Next(100);
 Console.WriteLine("Quanti tentativi vuoi?");
 int tentativi = Convert.ToInt32(Console.ReadLine());
