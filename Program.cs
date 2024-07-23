@@ -22,7 +22,7 @@ while (tentativi > 0) //prova finché non ha finito i tentativi
     {
         Console.WriteLine("Prova più alto.");
         //Console.WriteLine($"Il numero è (segreto % 2 == 0 ? "pari" : "dispari")");
-        if (segreto % 2 == 0) //Valuta se il resto della divisione è zero per cinsigliare se è pari o dispari
+        if (segreto % 2 == 0) //Valuta se il resto della divisione è zero per consigliare se è pari o dispari
             Console.WriteLine("Il numero è pari");
         else
             Console.WriteLine("Il numero è dispari");
@@ -30,7 +30,7 @@ while (tentativi > 0) //prova finché non ha finito i tentativi
     else if (num > segreto)
     {
         Console.WriteLine("Prova più basso.");
-        if (segreto % 2 == 0) //Valuta se il resto della divisione è zero per cinsigliare se è pari o dispari
+        if (segreto % 2 == 0) //Valuta se il resto della divisione è zero per consigliare se è pari o dispari
             Console.WriteLine("Il numero è pari");
         else
             Console.WriteLine("Il numero è dispari");
